@@ -1,0 +1,56 @@
+{
+  "name": "@ozdemirburak/morse-code-translator",
+  "version": "5.0.4",
+  "description": "Morse code translator helps you convert text to Morse code and vice versa, with the option to play Morse code audio.",
+  "keywords": [
+    "morse",
+    "morse alphabet",
+    "morse code",
+    "morse decoder",
+    "morse encoder",
+    "morse translator",
+    "morse code translator"
+  ],
+  "license": "MIT",
+  "homepage": "https://morsecodetranslator.com",
+  "author": "Burak Özdemir",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ozdemirburak/morse-code-translator.git"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "eslint": "^8.51.0",
+    "eslint-config-standard-with-typescript": "^39.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "10.2.0",
+    "nyc": "^15.1.0",
+    "rollup": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "types": "./src/index.d.ts",
+  "main": "./src/index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build-rel": "rollup -c -p @rollup/plugin-terser -o ./dist/morse-code-translator.min.js",
+    "tsc": "tsc --noEmit",
+    "test": "mocha",
+    "test-cov": "nyc mocha",
+    "lint": "eslint ./src/index.ts"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
